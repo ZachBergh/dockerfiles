@@ -1,0 +1,1 @@
+FROM docker.cn/docker/redis:2.8.17
