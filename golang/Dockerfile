@@ -1,1 +1,1 @@
-FROM docker.cn/docker/golang:1.3.1-onbuild
+FROM docker.cn/docker/golang:latest
