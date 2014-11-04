@@ -4,6 +4,8 @@ FROM ubuntu:latest
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/10gen.list
 
+ADD sources.list /etc/apt/sources.list
+
 # Install MongoDB
 RUN apt-get update
 RUN apt-get install mongodb-10gen
@@ -12,4 +14,4 @@ RUN apt-get install mongodb-10gen
 RUN mkdir -p /data/db
 
 EXPOSE 27017
-ENTRYPOINT ["usr/bin/mongod"]
+ENTRYPOINT ["/usr/bin/mongod"]
