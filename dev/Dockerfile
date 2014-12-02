@@ -4,4 +4,4 @@ MAINTAINER Arthur Shui <shuiyuzhe@gmail.com>
 
 # install depencies
 
-RUN go get -u github.com/gpmgo/gopm
+RUN go get -u github.com/tools/godep
