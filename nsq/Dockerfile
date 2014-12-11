@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM docker.cn/docker/ubuntu:14.04
 
 # Install NSQ.
 RUN \
