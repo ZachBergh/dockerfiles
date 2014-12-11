@@ -7,6 +7,13 @@
 # Pull base image.
 FROM docker.cn/docker/ubuntu:14.04
 
+# Replace APT Source.
+RUN sed -i 's/archive.ubuntu.com/cn.archive.ubuntu.com/g' /etc/apt/sources.list
+
+# Install wget.
+RUN apt-get update
+RUN apt-get -y install wget
+
 # Install NSQ.
 RUN \
   mkdir -p /tmp/nsq && \
