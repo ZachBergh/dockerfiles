@@ -17,7 +17,7 @@ dockerfile/java:oracle-java7
 ## Usage
 
 ```shell
-docker run -d -p 49892:9200 -p 49893:9300 es
+docker run -d --name es -p  49892:9200 -p 49893:9300 es
 ```
 
 ## Attach persistent/shared directories
